@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Item</title>
+    <style>
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .item img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="item" id="itemDetails">
+        <!-- Item details will be populated here -->
+    </div>
+    <button onclick="purchase()">Purchase</button>
+
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                img: params.get('img'),
+                title: params.get('title'),
+                label: params.get('label'),
+                option: params.get('option')
+            };
+        }
+
+        function displayItemDetails() {
+            const itemDetails = getQueryParams();
+
+            // Create and set image
+            var img = document.createElement('img');
+            img.setAttribute('src', itemDetails.img);
+
+            // Create and set title
+            var title = document.createElement('div');
+            title.innerText = itemDetails.title;
+
+            // Create and set label with option
+            var label = document.createElement('div');
+            label.innerText = `${itemDetails.label}: ${itemDetails.option}`;
+
+            // Append elements to the item details container
+            var itemContainer = document.getElementById('itemDetails');
+            itemContainer.append(img);
+            itemContainer.append(title);
+            itemContainer.append(label);
+        }
+
+        function purchase() {
+            alert('Item purchased successfully!');
+            // Add actual purchase logic here
+        }
+
+        // Display item details on page load
+        window.onload = displayItemDetails;
+    </script>
+</body>
+</html>

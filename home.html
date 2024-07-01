@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <head>
+        <title>Home - GETSETKART</title>
+            
+    </head>
+    <body>
+        <div id="shopify-section-annoucement" class="shopify-section">
+    
+        <style data-shopify="">
+            .announcement-bar {
+                background-color: #138cc0;
+                
+            }
+            .announcement-bar_content, .sf-topbar_close {
+               
+                text-align: center;
+                font-size: 4rem;
+    color: rgb(227, 219, 227);
+    font-family: "Arvo", cursive;
+    text-shadow: 5px 0 #1a2921;
+            }
+            .announcement-bar a:hover {
+                opacity: .6;
+            }
+
+            
+        blink {
+            color: #2d38be;
+            
+            font-size: 100px;
+            text-align:center ; 
+        }
+
+        </style>
+        <section data-section-id="annoucement" data-section-type="announcement" class="announcement-bar relative">
+        <div class="announcement-bar__content md:text-center py-2.5 text-base"><span class="font-medium" style="font-size: 50px;" id="blink">Get ₹250 off with code GOKART250!</span></div>
+        </section>
+        <a href="index.html"><h2 style="text-align:right">About Us</a>
+    
+
+
+</div>
+       
+          <script type="text/javascript">
+            var blink = document.getElementById('blink');
+            setInterval(function() {
+                blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+            }, 1500);
+        </script>
+    </body>
+</html>
